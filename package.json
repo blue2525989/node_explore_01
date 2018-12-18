@@ -1,0 +1,14 @@
+{
+  "name": "node-eexplore-01",
+  "version": "1.0.0",
+  "description": "having some fun in node",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "jason bierbrauer",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
