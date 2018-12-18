@@ -1,6 +1,6 @@
 'use strict'
 
-function arrayComparePrimativeSmall() {
+function arrayCompare1() {
   let arrayOne = []
   let arrayTwo = []
   let arrayThree = []
@@ -53,7 +53,7 @@ function arrayComparePrimativeSmall() {
   console.log("map loop", end4 - start4)
 }
 
-function arrayComparePrimativeMedium() {
+function arrayCompare2() {
   let arrayOne = []
   let arrayTwo = []
   let arrayThree = []
@@ -106,13 +106,13 @@ function arrayComparePrimativeMedium() {
   console.log("map loop", end4 - start4)
 }
 
-function arrayComparePrimativeLarge() {
+function arrayCompare3() {
   let arrayOne = []
   let arrayTwo = []
   let arrayThree = []
   let arrayFour = []
 
-  for (let i = 0; i < 5000000; i++) {
+  for (let i = 0; i < 100000; i++) {
     const obj = {
       key1: "string1",
       key2: 22,
@@ -159,13 +159,13 @@ function arrayComparePrimativeLarge() {
   console.log("map loop", end4 - start4)
 }
 
-function arrayComparePrimativeExtraLarge() {
+function arrayCompare4() {
   let arrayOne = []
   let arrayTwo = []
   let arrayThree = []
   let arrayFour = []
 
-  for (let i = 0; i < 10000000; i++) {
+  for (let i = 0; i < 200000; i++) {
     const obj = {
       key1: "string1",
       key2: 22,
@@ -212,13 +212,13 @@ function arrayComparePrimativeExtraLarge() {
   console.log("map loop", end4 - start4)
 }
 
-arrayComparePrimativeSmall()
+arrayCompare1()
 console.log("\n")
-arrayComparePrimativeMedium()
+arrayCompare2()
 console.log("\n")
-arrayComparePrimativeLarge()
+arrayCompare3()
 console.log("\n")
-arrayComparePrimativeExtraLarge()
+arrayCompare4()
 console.log("\n")
 
 
