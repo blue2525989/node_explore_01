@@ -17,23 +17,15 @@ function arrayCompare() {
     let arrayFour = []
 
     for (let i = 0; i < values[valIdx]; i++) {
-      const obj = {
-        key1: "string1",
-        key2: 22,
-        key3: {
-          inner1: "string",
-          inner2: "value"
-        }
-      }
-      arrayOne.push(obj)
-      arrayTwo.push(obj)
-      arrayThree.push(obj)
-      arrayFour.push(obj)
+      arrayOne.push(true)
+      arrayTwo.push(true)
+      arrayThree.push(true)
+      arrayFour.push(true)
     }
 
     const start1 = new Date()
     for(let i = 0; i < arrayOne.length; i++) {
-      arrayOne[i].key3.inner1 = "bananas"
+      arrayOne[i] = false
     }
     const end1 = new Date()
     // clear
@@ -42,7 +34,7 @@ function arrayCompare() {
 
     const start2 = new Date()
     for(let obj in arrayTwo) {
-      arrayTwo[obj].key3.inner1 = "bananas"
+      arrayTwo[obj] = false
     }
     const end2 = new Date()
     // clear
@@ -50,14 +42,14 @@ function arrayCompare() {
 
 
     const start3 = new Date()
-    arrayThree.forEach( (obj, idx) => { arrayThree[idx].key3.inner1 = "bananas" })
+    arrayThree.forEach( (obj, idx) => { arrayThree[idx] = false })
     const end3 = new Date()
     // clear
     arrayThree = null
 
 
     const start4 = new Date()
-    arrayFour = arrayFour.map(obj => obj.key3.inner1 = "bananas")
+    arrayFour = arrayFour.map(obj => { obj = false; return obj } )
     const end4 = new Date()
     // clear
     arrayFour = null
@@ -90,11 +82,10 @@ function* arrayCompareGenerator() {
     let arrayFour = []
 
     for (let i = 0; i < values[valIdx]; i++) {
-      let val = true
-      arrayOne.push(val)
-      arrayTwo.push(val)
-      arrayThree.push(val)
-      arrayFour.push(val)
+      arrayOne.push(true)
+      arrayTwo.push(true)
+      arrayThree.push(true)
+      arrayFour.push(true)
     }
 
     const start1 = new Date()
